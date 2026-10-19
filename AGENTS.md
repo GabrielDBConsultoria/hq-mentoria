@@ -125,7 +125,7 @@ verificação e registro de decisões/precedentes, não como fonte de conteúdo 
 
 ## Trabalho coordenado: Project, issues e identificação
 
-**Project guia.** O [Project #22 "Mentoria"](https://github.com/users/GabrielDBConsultoria/projects/22) é o guia principal do trabalho de `hq-mentoria` e `hq-mulder`. Quando a sessão abrir na pasta de um repo e o link do Project for indicado, priorize as issues **daquele repo** dentro do Project. Sem o link, não presuma que o Project está em uso.
+**Project de execução.** O [Project #22 "Mentoria"](https://github.com/users/GabrielDBConsultoria/projects/22) é o Project de execução e o guia principal do trabalho de `hq-mentoria` e `hq-mulder`. Quando a sessão abrir na pasta de um repo e o link do Project for indicado, priorize as issues **daquele repo** dentro do Project. Sem o link, não presuma que o Project está em uso.
 
 **Issues são handoffs.** Qualquer agente do HQ pode assumir uma issue disponível, então cada issue deve bastar sozinha para quem chega sem contexto: situação, contexto, objetivo, estado atual, próximo passo, critério de pronto e fontes.
 
@@ -137,7 +137,7 @@ verificação e registro de decisões/precedentes, não como fonte de conteúdo 
 | **Harness** | Qual programa executa o agente | Claude Code, Cursor, Hermes, Codex |
 | **Superfície** | Onde o agente é operado | CLI, VPS, Discord, VS Code, Painel Web, App Desktop |
 
-Formato, no corpo ou em comentário: `Agente: Dana Scully | Harness: Claude Code | Superfície: CLI`.
+Formato, no corpo ou em comentário: `Agente: Dana Scully | Harness: Claude Code | Superfície: CLI`. Sem perfil de agente carregado, use `Agente: sem persona`. O servidor onde roda entra como qualificador da superfície, por exemplo `CLI (VPS)`.
 
 Combinações de exemplo: Dana Scully, Claude Code, CLI · Fox Mulder, Cursor, VPS · Rita, Hermes, Discord · Bruno, Codex, VS Code · Vera, Hermes, Painel Web · Ottor, Hermes, App Desktop. O mesmo agente pode aparecer em harnesses e superfícies diferentes, e o mesmo harness serve a vários agentes.
 
