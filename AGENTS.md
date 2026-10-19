@@ -2,6 +2,8 @@
 
 > Orientação para qualquer agente/LLM que trabalhe num projeto criado a partir deste template.
 
+> **Linguagem:** os termos do HQ (agente, harness, superfície, sessão, frente, handoff, Project e outros) estão definidos em [`GLOSSARY.md`](./GLOSSARY.md). Use esses termos; os `CONTEXT.md` são legado.
+
 ## Fluxo Padrão de Projeto
 
 Todo projeto segue esta sequência de fases, nesta ordem, antes de qualquer implementação:
