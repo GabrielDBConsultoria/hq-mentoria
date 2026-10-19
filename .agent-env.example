@@ -1,0 +1,17 @@
+# Copie para .agent-env e preencha. Nunca comite o .agent-env real (segredos).
+# Este arquivo (.example) é seguro para versionar.
+
+# Notion (worker / leitura de contexto)
+NOTION_API_TOKEN=
+
+# Caminho do Cofre Obsidian (fonte de verdade)
+COFRE_PATH=D:\Obsidian\Cofre
+# Na VPS:
+# COFRE_PATH=/opt/data/profiles/hq-exec/home/cofre
+
+# GitHub (acesso aos repos da org)
+GITHUB_TOKEN=
+
+# Bridge local (workers-notion) — allowlist de repos a escanear
+HQ_BRIDGE_ALLOWLIST=
+HQ_BRIDGE_OBSIDIAN_VAULT=D:\Obsidian\Cofre

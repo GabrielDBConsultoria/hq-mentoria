@@ -1,0 +1,33 @@
+{
+  "name": "workers-notion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "description": "Notion Workers for HQ Araca agents Rita, Vera, and Kai.",
+  "scripts": {
+    "build": "tsc --outDir dist --noEmit false",
+    "check": "tsc --noEmit",
+    "check:capabilities": "npm run build && node scripts/check-capabilities.mjs",
+    "exec:preview": "ntn workers exec previewNotionChange --local --dotenv .env.local",
+    "exec:vera": "ntn workers exec veraDraftPrd --local --dotenv .env.local",
+    "exec:rita": "ntn workers exec ritaUpdateProjectStatus --local --dotenv .env.local",
+    "exec:kai": "ntn workers exec kaiPlanSprint --local --dotenv .env.local",
+    "bridge:scan": "node scripts/scan-local-context.mjs",
+    "bridge:scan:obsidian": "node scripts/scan-obsidian-context.mjs",
+    "bridge:publish": "node scripts/publish-repo-snapshot.mjs"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.3.0",
+    "@notionhq/workers": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "tsx": "^4.23.4",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10"
+  }
+}

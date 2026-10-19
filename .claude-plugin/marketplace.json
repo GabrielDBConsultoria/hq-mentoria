@@ -1,0 +1,14 @@
+{
+  "name": "repo-padrao",
+  "owner": {
+    "name": "Gabriel Delucca"
+  },
+  "description": "Mods do Claude Code que acompanham todo projeto criado a partir do repo-padrao.",
+  "plugins": [
+    {
+      "name": "context-guard",
+      "source": "./mods/context-guard",
+      "description": "Mostra o contexto em uso contra o teto de 100k tokens e avisa ao entrar na Dumb Zone."
+    }
+  ]
+}

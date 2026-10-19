@@ -1,0 +1,28 @@
+{
+  "name": "context-guard",
+  "version": "0.1.0",
+  "description": "Mostra o contexto em uso contra o teto de 100k tokens e avisa ao entrar na Dumb Zone.",
+  "author": { "name": "Gabriel Delucca" },
+  "license": "UNLICENSED",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "ceiling": {
+      "type": "number",
+      "title": "Teto",
+      "description": "Contexto em uso máximo aceito, em tokens.",
+      "default": 100000
+    },
+    "attention": {
+      "type": "number",
+      "title": "Limiar de Atenção",
+      "description": "Início da faixa Atenção, em tokens.",
+      "default": 50000
+    },
+    "risk": {
+      "type": "number",
+      "title": "Limiar de Risco",
+      "description": "Início da faixa Risco (Dumb Zone), em tokens.",
+      "default": 80000
+    }
+  }
+}

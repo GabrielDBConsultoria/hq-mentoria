@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "repo-padrao": {
+      "source": {
+        "source": "directory",
+        "path": "."
+      }
+    }
+  },
+  "enabledPlugins": {
+    "context-guard@repo-padrao": true
+  }
+}
