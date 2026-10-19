@@ -80,6 +80,9 @@ Peças do "harness do projeto" no template (o que controlamos; modelo e harness-
    decisão do mentor (resolvida: agente novo "Mentor"; Fox Mulder é o especialista em ferramentas de IA, ver passo 4).
 7. **Hook/mod `context-guard`** (`mods/context-guard/`, com testes): alerta ao entrar na "dumb zone" de 100k tokens. É a única
    peça que *impõe* algo; observar na prática se ajuda e se o limite de 100k faz sentido.
+9. **Bit de executar espalhado por cópia** (2026-10-19): os documentos copiados de `hq-governance/temp/` (permissão 777, dono do Hermes)
+   entraram no `hq-mulder` como `100755`. Corrigido com `chmod 644` + commit `chore:`. Oportunidade: o `.gitattributes`/checklist
+   do template poderia alertar para modos `100755` em `.md`, e a `temp/` deveria ter permissões menos abertas.
 8. **Dois marketplaces/nomes**: o plugin vem como `context-guard@repo-padrao` (nome do marketplace), enquanto o template se chama
    `repo-padrao-araca`. Mesmo problema de nome duplicado já listado para as mesas.
 
