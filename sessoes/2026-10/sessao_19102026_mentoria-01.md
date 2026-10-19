@@ -1,7 +1,7 @@
 # Mentoria — Sessão 01 (2026-10-19)
 
 > Movido do rascunho para o repo em 2026-10-19 (origem: `/srv/hqaraca/mesas2/mentoria-rascunho/`, antes `/home/hq-exec/mentoria-rascunho`).
-> Localização atual: `hq-mentoria/sessoes/2026-10/` (ainda não commitado).
+> Localização atual: `hq-mentoria/sessoes/2026-10/`. Atualizado no fim da sessão: seção "Feito depois" e handoff reescritos.
 
 ## Aprendido (com as palavras do Gabriel, validadas)
 1. Antes de tudo, descobrir onde estou: `pwd`, `git rev-parse --show-toplevel`, `ls`.
@@ -80,22 +80,40 @@ Peças do "harness do projeto" no template (o que controlamos; modelo e harness-
    decisão do mentor (resolvida: agente novo "Mentor"; Fox Mulder é o especialista em ferramentas de IA, ver passo 4).
 7. **Hook/mod `context-guard`** (`mods/context-guard/`, com testes): alerta ao entrar na "dumb zone" de 100k tokens. É a única
    peça que *impõe* algo; observar na prática se ajuda e se o limite de 100k faz sentido.
+8. **Dois marketplaces/nomes**: o plugin vem como `context-guard@repo-padrao` (nome do marketplace), enquanto o template se chama
+   `repo-padrao-araca`. Mesmo problema de nome duplicado já listado para as mesas.
 9. **Bit de executar espalhado por cópia** (2026-10-19): os documentos copiados de `hq-governance/temp/` (permissão 777, dono do Hermes)
    entraram no `hq-mulder` como `100755`. Corrigido com `chmod 644` + commit `chore:`. Oportunidade: o `.gitattributes`/checklist
    do template poderia alertar para modos `100755` em `.md`, e a `temp/` deveria ter permissões menos abertas.
-8. **Dois marketplaces/nomes**: o plugin vem como `context-guard@repo-padrao` (nome do marketplace), enquanto o template se chama
-   `repo-padrao-araca`. Mesmo problema de nome duplicado já listado para as mesas.
+10. **`CLAUDE.md` cita `AGENTS.md › Operação Git e mesas`, mas essa seção não existe no `AGENTS.md`.** Mesmo tipo de referência quebrada
+    do item 1. Issue `hq-mentoria` #5.
+11. **O `CONTEXT.md` do template é o glossário do mod `context-guard`, não da linguagem do projeto.** Quem procura o vocabulário do
+    projeto encontra termos de um mod. Resolvido nesta sessão: `GLOSSARY.md` é o padrão e o `CONTEXT.md` fica como legado
+    (ADR 0001; migração em #11).
+12. **`AGENTS.md` (Governança) exige issue e PR antes de toda escrita versionada**, mas o template não traz template de issue nem
+    a skill de reconciliação a mão. Nesta sessão os primeiros commits foram direto na `main`, o que contraria essa regra (reconhecido).
+
+## Feito depois (continuação da sessão, 2026-10-19)
+- **Clone:** `hq-mentoria` clonado em `/srv/hqaraca/mesas2/hq-mentoria` (substitui a sugestão `/srv/hqaraca/projetos/`).
+- **Identidade git global:** `Gabriel Barros` com e-mail noreply do GitHub (conferida com `git log`).
+- **Mentor:** `agents/mentoria/mentor.md` (independente de harness; revisa o trabalho dos demais agentes). Commit `68b9fbe`.
+- **Fox Mulder:** papel original mantido (inteligência de ferramentas de IA, consultor de engenharia de harness). Material de origem copiado de `hq-governance/temp/` para o repo novo.
+- **`hq-mulder`:** repo privado criado a partir do `repo-padrao-araca`. `docs/origem/` com 3 arquivos e 8 ZKs (`24597b6`) e correção de permissões `100755` para `100644` (`1165cfd`). A `temp/` segue intacta; `SOUL-hq-exec.md` e `entrypoint-fixed.sh` não foram copiados nem lidos.
+- **Project #22 "Mentoria":** é o Project de execução. 17 issues dos dois repos (hq-mentoria #1 a #12, hq-mulder #1 a #5), todas escritas como handoffs.
+- **Regras no `AGENTS.md` dos dois repos** (branch `docs/regras-project-handoff-identificacao`): Project de execução, issues como handoffs, identificação `Agente | Harness | Superfície`, commit e push.
+- **Linguagem ubíqua** (grilling Q1 a Q20): `GLOSSARY.md` (16 verbetes), ADR 0001, `CONTEXT.md` como legado (branch `docs/linguagem-ubiqua`); link no `hq-mulder` (branch `docs/referencia-glossary`).
+- **Notion:** páginas `Sessões - hq-mentoria` e `Sessões - hq-mulder` criadas, preenchidas e corrigidas (o `CONTEXT.md` não era genérico).
+- **Convenções acordadas:** agente = persona (sem perfil: "sem persona"), harness = programa, superfície = interface; commit pelo agente com autorização, push com confirmação, merge só do Gabriel; mudança versionada sempre por issue, branch e PR.
+- **Erro reconhecido:** os primeiros commits foram direto na `main`, sem issue, contrariando a Governança do `AGENTS.md`. Não foram desfeitos; o fluxo correto vale daqui em diante.
 
 ## HANDOFF para a próxima sessão
-**Estado:** repo hub criado no GitHub e **clonado em `/srv/hqaraca/mesas2/hq-mentoria`** (decisão do Gabriel, 2026-10-19; substitui a sugestão `/srv/hqaraca/projetos/`). O clone já tem `sessoes/`, `CLAUDE.md` e `AGENTS.md` vindos do template. Nada em produção foi alterado.
-**Pendente do Gabriel:** a "pergunta 2" que ele ia fazer.
-**Próximos passos sugeridos (um por vez, mentor conduz, Gabriel executa):**
-1. Abrir a sessão e rodar o bloco de comandos iniciais (seção "Embrião do INICIO-DO-DIA").
-2. ~~Decidir onde clonar `hq-mentoria`~~ — feito: `/srv/hqaraca/mesas2/hq-mentoria`.
-3. ~~No clone: criar `mentor/PERFIL.md` e mover este rascunho para `sessoes/`~~ — rascunho movido para `sessoes/2026-10/`. O `PERFIL.md` não será criado: o próprio perfil do agente (passo 4) é a fonte única das regras do mentor.
-4. ~~Definir o mentor~~ — decidido por Gabriel: agente novo chamado **Mentor** (nome objetivo), em `agents/mentoria/mentor.md`. Mentor revisa o trabalho de todos os agentes, é o mentor pessoal de melhorias e garante que estudos, pesquisas, aulas e leituras sejam aplicados na prática. **Não atrelado ao Claude Code**: a mentoria explora outros harnesses. Falta testar o perfil na prática.
-   - **Fox Mulder mantém a ideia original** (`/srv/hqaraca/projetos/hq-governance/temp/fox-mulder.md`): especialista em inteligência de ferramentas de IA (harness, MCP, hooks, agent-to-agent, skills). É o consultor para **engenharia de harness**. Um perfil meu que colidia com o dele foi apagado antes do commit.
-   - **Repo de prática = repo do Mulder** (novo, a criar a partir do `repo-padrao-araca`), no lugar do fork do `mdatlas`; vive até o Mulder ser implantado no fluxo como agente do `lobby-agents`.
-5. ~~Decidir o repo 2 de prática~~ — decidido: repo do Mulder (ver passo 4); falta definir o nome e criar. (Antes: fork do `ramireznoy/mdatlas`; atenção: o repo real é um navegador/editor de Markdown em JS, **sem** grafo de links, diferente do que dizia o handoff) e o 1 Project do GitHub.
-**Plano completo (referência):** `/home/hq-exec/.claude/plans/preciso-me-aprofundar-em-serene-puddle.md`
-**Regras do mentor:** um passo por vez; Gabriel executa e explica com as próprias palavras; "isso já existe?" antes de criar; anotar bagunça em "arrumar depois" sem arrumar na hora; conferir na fonte antes de afirmar. 
+**Estado (fim de 19/10/2026):** dois repos clonados em `mesas2`, com 4 branches e 4 PRs aguardando revisão e merge do Gabriel (`hq-mentoria`: `docs/linguagem-ubiqua` e `docs/regras-project-handoff-identificacao`; `hq-mulder`: `docs/referencia-glossary` e `docs/regras-project-handoff-identificacao`). Nada em produção foi alterado.
+**Pendente do Gabriel:**
+1. Revisar e mergear os 4 PRs. Ordem sugerida: o do glossário no `hq-mentoria` primeiro, porque o link do `hq-mulder` só funciona depois dele.
+2. Decidir as issues de acompanhamento `hq-mentoria` #7 a #12 (promover o glossário ao `lobby-agents`, atualizar a skill `memoria-canonica`, separar o `Agente` do Notion, layout de `mesas2/`, destino dos `CONTEXT.md`, impor a identificação).
+3. Destino de `SOUL-hq-exec.md` e `entrypoint-fixed.sh` (`hq-mulder` #4).
+**Próxima ação única:** abrir o agente na raiz (`cd /srv/hqaraca/mesas2/hq-mentoria`), colar o link do Project #22 (https://github.com/users/GabrielDBConsultoria/projects/22) e assumir a issue `hq-mentoria` #2 (testar o `Mentor` e a barra do `context-guard`). Comentar na issue com `Agente: <nome ou sem persona> | Harness: <programa> | Superfície: <onde opera>`.
+**Como retomar:** (1) rodar o bloco "Embrião do INICIO-DO-DIA"; (2) ler `GLOSSARY.md`; (3) ver o Project #22 filtrado pelo repo da pasta; (4) trabalhar por issue, branch e PR.
+**Memória fora do repo:** páginas `Sessões - hq-mentoria` e `Sessões - hq-mulder` no Notion; memória local do agente em `~/.claude/projects/-srv-hqaraca-mesas2/memory/` (válida só neste servidor).
+**Plano completo (referência, só neste servidor):** `/home/hq-exec/.claude/plans/preciso-me-aprofundar-em-serene-puddle.md`
+**Regras do mentor:** um passo por vez; Gabriel executa e explica com as próprias palavras; "isso já existe?" antes de criar; anotar bagunça em "arrumar depois" sem arrumar na hora; conferir na fonte antes de afirmar.
