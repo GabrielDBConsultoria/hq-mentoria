@@ -123,6 +123,30 @@ momentos:
 O grafo `semantica` não substitui ZKs do Cofre nem specs/OpenSpec — funciona como camada de
 verificação e registro de decisões/precedentes, não como fonte de conteúdo narrativo.
 
+## Trabalho coordenado: Project, issues e identificação
+
+**Project guia.** O [Project #22 "Mentoria"](https://github.com/users/GabrielDBConsultoria/projects/22) é o guia principal do trabalho de `hq-mentoria` e `hq-mulder`. Quando a sessão abrir na pasta de um repo e o link do Project for indicado, priorize as issues **daquele repo** dentro do Project. Sem o link, não presuma que o Project está em uso.
+
+**Issues são handoffs.** Qualquer agente do HQ pode assumir uma issue disponível, então cada issue deve bastar sozinha para quem chega sem contexto: situação, contexto, objetivo, estado atual, próximo passo, critério de pronto e fontes.
+
+**Identificação obrigatória.** Toda issue ou PR em andamento identifica quem está com ela, em três campos:
+
+| Campo | Responde | Exemplos |
+|---|---|---|
+| **Agente** | Quem é, no HQ | Dana Scully, Fox Mulder, Rita, Bruno, Vera, Ottor |
+| **Harness** | Qual programa executa o agente | Claude Code, Cursor, Hermes, Codex |
+| **Superfície** | Onde o agente é operado | CLI, VPS, Discord, VS Code, Painel Web, App Desktop |
+
+Formato, no corpo ou em comentário: `Agente: Dana Scully | Harness: Claude Code | Superfície: CLI`.
+
+Combinações de exemplo: Dana Scully, Claude Code, CLI · Fox Mulder, Cursor, VPS · Rita, Hermes, Discord · Bruno, Codex, VS Code · Vera, Hermes, Painel Web · Ottor, Hermes, App Desktop. O mesmo agente pode aparecer em harnesses e superfícies diferentes, e o mesmo harness serve a vários agentes.
+
+Para assumir uma issue, comente com essa linha e atribua-a. Ao pausar ou terminar, comente o estado e o próximo passo e diga se a issue fica **liberada**. Os commits e as issues saem sob a conta do Gabriel, então a identidade do agente vale só pelo que está escrito neste formato.
+
+**Commit e push.** O agente pode fazer commit. O push pede confirmação do Gabriel a cada vez. Merge de PR, force-push e apagar branches só com o Gabriel.
+
+Estas regras orientam o agente; não impedem a execução. A imposição vem de configuração (permissões no `settings.json`, campos do Project, template de issue).
+
 ## Governança
 
 O contrato canônico é o [Contrato operacional de agentes](https://github.com/GabrielDBConsultoria/lobby-agents/blob/main/docs/agent-operating-contract.md), mantido no `lobby-agents`. Ele define a hierarquia de fontes, a leitura progressiva, as fronteiras entre HQ/mesas/worktrees e o gate GitHub; não replique estas regras neste template.
