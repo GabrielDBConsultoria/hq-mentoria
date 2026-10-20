@@ -4,10 +4,10 @@
 
 ## Operação Git e mesas
 
-Contrato completo em `AGENTS.md` › Operação Git e mesas. Resumo para Claude Code:
+Contrato completo no [Contrato operacional de agentes](https://github.com/GabrielDBConsultoria/lobby-agents/blob/main/docs/agent-operating-contract.md) (`lobby-agents`). Resumo para Claude Code:
 
 - Desenvolvimento em `mesas/<repo>/worktrees/<frente>/`; `main` da mesa só para `git pull`.
-- Leia `MESA.md` antes de cada sessão; trabalhe em **uma** frente por sessão.
+- Leia `MESA.md`, se existir, antes de cada sessão; trabalhe em **uma** frente por sessão.
 - Ao abrir sessão: use a worktree da frente ativa como cwd — não `main`, não `~/.traycer/worktrees/`
   para frentes duráveis.
 - Com Traycer ou outro agente na mesma sessão: workspace = caminho absoluto da worktree na mesa.
