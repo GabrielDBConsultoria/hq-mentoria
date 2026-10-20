@@ -1,0 +1,100 @@
+name: Issue handoff
+description: Modelo oficial de issue do HQ. Deve bastar sozinha para um agente sem contexto assumir.
+title: "[HANDOFF] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Uma issue é um handoff (ver `GLOSSARY.md`). Quem chega sem contexto precisa concluí-la só com o que está aqui.
+  - type: input
+    id: identificacao
+    attributes:
+      label: Identificação de quem abre
+      description: "Formato: Agente: <nome ou sem persona> | Harness: <programa> | Superfície: <onde opera>"
+      placeholder: "Agente: sem persona | Harness: Claude Code | Superfície: CLI (VPS)"
+    validations:
+      required: true
+  - type: dropdown
+    id: situacao
+    attributes:
+      label: Situação
+      options:
+        - Disponível
+        - Em andamento
+        - Bloqueada por decisão do Gabriel
+        - Liberada (pausada)
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo-entrega
+    attributes:
+      label: Tipo de entrega
+      description: Se a decisão é do Gabriel, o agente prepara opções e não decide.
+      options:
+        - Executável (o agente conclui sozinho)
+        - Preparar opções (a decisão é do Gabriel)
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Por que isto existe. O que já se sabe, marcando Fato ou [INFERÊNCIA].
+    validations:
+      required: true
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo e fora de escopo
+      description: O que entregar e o que não entra.
+    validations:
+      required: true
+  - type: textarea
+    id: estado-atual
+    attributes:
+      label: Estado atual
+      description: O que já existe ou foi feito. "Nada" se for o caso.
+    validations:
+      required: true
+  - type: textarea
+    id: proximo-passo
+    attributes:
+      label: Próximo passo
+    validations:
+      required: true
+  - type: textarea
+    id: pronto-quando
+    attributes:
+      label: Pronto quando
+      description: Critérios verificáveis por outra pessoa ou agente, sem depender de opinião.
+    validations:
+      required: true
+  - type: textarea
+    id: decisoes
+    attributes:
+      label: Decisões já tomadas e ponto de parada
+      description: O que não se rediscute e quando o agente deve parar (comentar, liberar a issue ou esperar o Gabriel).
+    validations:
+      required: true
+  - type: input
+    id: onde-trabalha
+    attributes:
+      label: Onde trabalha
+      description: Repo, branch e como abre o PR.
+      placeholder: "hq-mentoria · feat/<slug> · PR contra main"
+    validations:
+      required: true
+  - type: textarea
+    id: fontes
+    attributes:
+      label: Fontes
+      description: Arquivos, issues, PRs e links usados.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ## Como assumir
+        Comente com `Agente: ... | Harness: ... | Superfície: ...` e atribua-se. Ao pausar ou terminar, comente o estado e o próximo passo e diga se a issue fica **liberada**.
