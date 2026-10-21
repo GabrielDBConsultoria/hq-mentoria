@@ -2,7 +2,7 @@
 
 > Orientação para qualquer agente/LLM que trabalhe num projeto criado a partir deste template.
 
-> **Linguagem:** os termos do HQ (agente, harness, superfície, sessão, frente, handoff, Project e outros) estão definidos em [`GLOSSARY.md`](./GLOSSARY.md). Use esses termos; os `CONTEXT.md` são legado.
+> **Linguagem:** os termos do HQ (agente, harness, superfície, sessão, frente, handoff, Project e outros) estão definidos em [`GLOSSARY.md`](./GLOSSARY.md). Use esses termos. Os termos do mod `context-guard` estão em [`mods/context-guard/GLOSSARY.md`](./mods/context-guard/GLOSSARY.md); o [`CONTEXT.md`](./CONTEXT.md) só redireciona.
 
 ## Fluxo Padrão de Projeto
 

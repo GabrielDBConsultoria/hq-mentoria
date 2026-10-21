@@ -1,6 +1,6 @@
 # Linguagem ubíqua do HQ
 
-Vocabulário compartilhado entre como o HQ trabalha (negócio) e como o agente é montado (arquitetura). Fonte única para `hq-mentoria` e `hq-mulder`. Os termos do mod `context-guard` seguem no [`CONTEXT.md`](./CONTEXT.md), mantido como legado.
+Vocabulário compartilhado entre como o HQ trabalha (negócio) e como o agente é montado (arquitetura). Fonte única para `hq-mentoria` e `hq-mulder`. Os termos do mod `context-guard` estão em [`mods/context-guard/GLOSSARY.md`](./mods/context-guard/GLOSSARY.md). O [`CONTEXT.md`](./CONTEXT.md) da raiz fica só como redirecionamento legado.
 
 ## Como o HQ trabalha
 
