@@ -53,8 +53,8 @@ Interface que visualiza a esteira de agentes de uma frente para retomada rápida
 _Avoid_: esteira, dashboard
 
 **Memória canônica da frente**:
-Página contínua com o estado, as decisões e o histórico de uma frente, para qualquer pessoa ou agente retomá-la. Vive como ponteiro reforçado (ver termo) entre o Notion e o repo `hq-registros`: o Notion guarda a página viva e curta por mesa (visão atual); o repo guarda só link, data do último sync e um resumo de 1 a 2 linhas. GitHub é dono do histórico; Notion é dono da visão atual.
-_Avoid_: sessões da mesa, página de sessão
+Página contínua com o estado, as decisões e o histórico de uma frente, para qualquer pessoa ou agente retomá-la. Vive como ponteiro reforçado (ver termo) entre o Notion e o repo `hq-registros`: o Notion guarda a página viva e curta de cada frente (repo), uma por frente no database "Sessões da Mesa" (visão atual); o repo guarda só link, data do último sync e um resumo de 1 a 2 linhas. GitHub é dono do histórico; Notion é dono da visão atual.
+_Avoid_: sessões da mesa (como nome do conceito; é só o nome do database no Notion), página de sessão
 
 **Ponteiro reforçado**:
 Padrão de memória canônica em que o repo não duplica o conteúdo do Notion — guarda só link, data do último sync e um resumo curto (1 a 2 linhas), o suficiente para um agente só-git decidir se precisa ir ler a página completa. Decidido para a Pergunta 5 do domain-modeling (`hq-mentoria#29`), em sessão de voz com perfil Dana, 22/11/2026; condicionado ao resultado dos testes de leitura do Notion sem ajuda, por harness (ver issues de teste em `hq-mentoria`).
