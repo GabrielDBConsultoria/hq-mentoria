@@ -68,7 +68,7 @@ Se passar: abrir `test_batches.py` (primeiro teste) e `model.py` (`Batch`, `allo
 
 ## Referências rápidas
 
-- Mentor: `agents/mentoria/mentor.md` (um passo por vez; você executa, Mentor conduz)
+- Orion (Mentor): `agents/mentoria/orion.md` (um passo por vez; você executa, Orion conduz)
 - Retomada anterior (Project store): `internal/retomada-mn1-cap01-2026-11-06.md` no store do Project mentoria
 - Sessões versionadas: `sessoes/` neste repo
 
